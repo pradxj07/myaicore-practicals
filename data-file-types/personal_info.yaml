@@ -1,0 +1,15 @@
+#personal_info.yaml
+first_name: Pradnya
+last_name: Joshi
+age: 44
+email: "ficusasoca@protonmail.com"
+address:
+  street: Lost
+  city: Unknown
+  state: Forward
+  zip: "12345"
+hobbies:
+  - Crochet
+  - Music
+  - "Listen to audio books"
+
