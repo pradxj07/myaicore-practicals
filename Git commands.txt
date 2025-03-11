@@ -1,0 +1,125 @@
+Go to directory where you want to create the repository
+
+git init
+
+If you created the repository in the wrond folder or directory, use the command - $ rm -rf .git 
+This will remove the file. 
+https://stackoverflow.com/questions/3212459/is-there-a-command-to-undo-git-init
+https://git-scm.com/docs/git-init
+
+
+
+
+Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+ 
+
+https://git-scm.com/docs/git-init#_examples
+Start a new Git repository for an existing code base
+$ cd /path/to/my/codebase
+$ git init      (1)
+$ git add .     (2)
+$ git commit    (3)
+Create a /path/to/my/codebase/.git directory.
+
+Add all existing files to the index.
+
+Record the pristine state as the first commit in the history.
+
+ From the documentation: Running git init in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning git init is to pick up newly added templates.
+ 
+ 
+ Other commands - 
+ - To modify message use git commit --amend 
+ - to make changes to the commit, 
+	* Adding more changes to the commit: If you've made a commit but then realize that you forgot to add a file or you've made an additional change that should be part of the commit, you can use the following workflow:
+		Stage the additional changes with git add
+		Then, use git commit --amend If you don't want to change the commit message, you can use git commit --amend --no-edit
+		
+Git statuses - 
+Modified - New is also modified 
+Untracked - not being tracked by git, i.e. git add is not run after changes to the file 
+Staged - after git  add . is run 
+Committed - Snapshot has been taken (including Staged files have been saved) after git commit -m "" / git comment --amend has been run 
+
+-- Branch exercise - 
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/commits-branches-repo (addition)
+$ cd ..
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials
+$ mkdir branches_example
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials
+$ cd branches_example
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example
+$ git init
+Initialized empty Git repository in E:/git_repositories/pajaicore-tutorials/branches_example/.git/
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ touch test.py
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ nano test.py
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git add test.py
+warning: in the working copy of 'test.py', LF will be replaced by CRLF the next time Git touches it
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git commit -m "test script"
+[master (root-commit) c07cf66] test script
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.py
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git branch branch_1
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git branch
+  branch_1
+* master
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git checkout -b branch_2^C
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git branch
+  branch_1
+* master
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (master)
+$ git checkout -b branch_2
+Switched to a new branch 'branch_2'
+
+UserPC@DESKTOP-FE2FSJ9 MINGW64 /e/git_repositories/pajaicore-tutorials/branches_example (branch_2)
+$ git branch
+  branch_1
+* branch_2
+  master
+
+*** check configs 
+
+git config  --list --show-origin
+
+
