@@ -1,0 +1,106 @@
+movies_to_print = 	[
+	{"title": "The Truman show", "description": "person who does not know he is in a reality tv show"}
+	,{"title": "Inside Out", "description": "Emotions of a 10 year old - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school"}
+	,{"title": "WALL·E", "description": "How two robots convert a waste-covered Earth"}
+	,{"title": "The Wild Robot", "description": "Change of 'heart' for a robot"}
+	,{"title": "Bend It Like Beckham", "description": "Culture clash in a British Indian family"}
+					]
+
+Task 1 - 
+def print_every_movie_title(movies):
+  for m in movies:
+    print(m["title"])
+
+  return None
+
+movies_to_print = 	[
+	{"title": "The Truman show", "description": "person who does not know he is in a reality tv show"}
+	,{"title": "Inside Out", "description": "Emotions of a 10 year old - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school"}
+	,{"title": "WALL·E", "description": "How two robots convert a waste-covered Earth"}
+	,{"title": "The Wild Robot", "description": "Change of 'heart' for a robot"}
+	,{"title": "Bend It Like Beckham", "description": "Culture clash in a British Indian family"}
+				          	]
+        
+print_every_movie_title(movies_to_print)
+
+Task 2 
+
+def get_movie_description_length(a_movie):
+  return len(a_movie["description"]
+
+movies_to_print = 	[
+	{"title": "The Truman show", "description": "person who does not know he is in a reality tv show"}
+	,{"title": "Inside Out", "description": "Emotions of a 10 year old - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school"}
+	,{"title": "WALL·E", "description": "How two robots convert a waste-covered Earth"}
+	,{"title": "The Wild Robot", "description": "Change of 'heart' for a robot"}
+	,{"title": "Bend It Like Beckham", "description": "Culture clash in a British Indian family"}
+				          	]
+							
+get_movie_description_length(movies_to_print[0])
+
+Task 3 
+
+def get_avg_movie_description_length(movies):
+	sum = 0 
+	for m in movies:
+		sum += len(m["description"])
+	return sum/len(movies)
+
+movies_to_print = 	[
+	{"title": "The Truman show", "description": "person who does not know he is in a reality tv show"}
+	,{"title": "Inside Out", "description": "Emotions of a 10 year old - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school"}
+	,{"title": "WALL·E", "description": "How two robots convert a waste-covered Earth"}
+	,{"title": "The Wild Robot", "description": "Change of 'heart' for a robot"}
+	,{"title": "Bend It Like Beckham", "description": "Culture clash in a British Indian family"}
+				          	]
+							
+get_avg_movie_description_length(movies_to_print)
+
+Task 4
+What is the maximum length of any movie name?
+Define a function called get_max_movie_name_length.
+
+def get_max_movie_name_length(movies):
+	
+  names = []
+  for m in movies:
+		names.append({len(m["title"]),m["title"]})             
+		print(names);
+  
+  return max(names)
+
+movies_to_print = 	[
+	{"title": "The Truman show", "description": "person who does not know he is in a reality tv show"}
+	,{"title": "Inside Out", "description": "Emotions of a 10 year old - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school"}
+	,{"title": "WALL·E", "description": "How two robots convert a waste-covered Earth"}
+	,{"title": "The Wild Robot", "description": "Change of 'heart' for a robot"}
+	,{"title": "Bend It Like Beckham", "description": "Culture clash in a British Indian family"}
+				          	]
+							
+get_max_movie_name_length(movies_to_print)
+
+
+x = 10
+y = 0
+
+# TODO: Create a divide function that uses a try-except block to return a 0 in case of a ZeroDivisionError
+def divide_with_try(a,b):
+    try: 
+      return a/b
+    except ZeroDivisionError: 
+      return 0
+
+divide_with_try(x,y)
+
+def user_input_divide():
+  while 1==1:
+    a = int(input("Enter value for a: "))
+    b = int(input("Enter value for b: "))
+
+    try: 
+      return a/b 
+      break
+    except ZeroDivisionError:
+      print("Zero Division error. Try again")
+              
+user_input_divide()
